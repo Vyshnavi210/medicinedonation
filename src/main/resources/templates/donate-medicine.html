@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Donate Medicine</title>
+</head>
+<body>
+
+<h1>Donate Medicine</h1>
+
+<form th:action="@{/medicine/save}"
+      th:object="${medicine}"
+      method="post">
+
+    Medicine Name:
+    <input type="text" th:field="*{medicineName}">
+    <br><br>
+
+    Quantity:
+    <input type="number" th:field="*{quantity}">
+    <br><br>
+
+    Expiry Date:
+    <input type="date" th:field="*{expiryDate}">
+    <br><br>
+
+    Description:
+    <input type="text" th:field="*{description}">
+    <br><br>
+
+    Donation Date:
+    <input type="date" th:field="*{donationDate}">
+    <br><br>
+
+    Member ID:
+    <input type="number" th:field="*{memberId}">
+    <br><br>
+
+    <button type="submit">
+        Donate
+    </button>
+
+</form>
+
+</body>
+</html>
